@@ -26,6 +26,7 @@
   border-bottom-right-radius: 1rem;
   background-color: var(--color-800);
   color: var(--color-100);
+  cursor: pointer;
 }
 
 .input,

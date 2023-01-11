@@ -7,6 +7,7 @@ import {
   ZoomControl,
   useMap,
 } from 'react-leaflet';
+import L from 'leaflet';
 import styles from '@styles/MapView.module.css';
 import 'leaflet/dist/leaflet.css';
 
@@ -19,8 +20,15 @@ function LocationMarker({ latitude, longitude }: Props) {
   const map = useMap();
   map.flyTo([latitude, longitude], 15);
 
+  const icon = L.icon({
+    iconUrl: 'src/assets/images/icon-location.svg',
+    iconSize: [41, 47],
+    iconAnchor: [10, 41],
+    popupAnchor: [2, -40],
+  });
+
   return (
-    <Marker position={[latitude, longitude]}>
+    <Marker position={[latitude, longitude]} icon={icon}>
       <Popup>Found it!</Popup>
     </Marker>
   );

@@ -12,8 +12,6 @@ export default function IpTrackerSearch({ value, onChange, onClick }: Props) {
     <form className={styles.search}>
       <input
         type="text"
-        name=""
-        id=""
         className={styles.input}
         placeholder="Search for any IP address or domain"
         value={value}
