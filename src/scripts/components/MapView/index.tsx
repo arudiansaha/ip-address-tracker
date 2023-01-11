@@ -21,7 +21,7 @@ function LocationMarker({ latitude, longitude }: Props) {
   map.flyTo([latitude, longitude], 15);
 
   const icon = L.icon({
-    iconUrl: 'src/assets/images/icon-location.svg',
+    iconUrl: 'src/assets/images/icon-location.png',
     iconSize: [41, 47],
     iconAnchor: [10, 41],
     popupAnchor: [2, -40],
@@ -43,7 +43,7 @@ export default function MapView({ latitude, longitude }: Props) {
         center={[latitude, longitude]}
         zoom={13}
         scrollWheelZoom
-        style={{ height: '74.9vh' }}
+        style={{ height: '68vh' }}
       >
         <ZoomControl position="bottomright" />
         <TileLayer

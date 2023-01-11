@@ -7,7 +7,7 @@
 }
 
 .pattern {
-  height: 250px;
+  height: 32vh;
   background-image: url('@assets/images/pattern-bg.png');
   background-size: cover;
 }

@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   width: 100%;
-  padding-block: clamp(1.25rem, 2vw, 2rem);
+  padding-block: clamp(1.25rem, 2.4vw, 3rem);
   text-align: center;
 }
 
