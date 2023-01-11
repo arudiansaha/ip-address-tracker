@@ -24,8 +24,10 @@
       "@assets/*":["assets/*"],
       "@styles/*":["styles/*"],
       "@components/*": ["scripts/components/*"],
+      "@hooks/*": ["scripts/hooks/*"],
       "@interfaces/*": ["scripts/interfaces/*"],
-      "@views/*": ["scripts/views/*"]
+      "@views/*": ["scripts/views/*"],
+      "@utils/*": ["scripts/utils/*"]
     }
   },
   "include": [

@@ -1,25 +1,48 @@
 import React from 'react';
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  ZoomControl,
+  useMap,
+} from 'react-leaflet';
 import styles from '@styles/MapView.module.css';
 import 'leaflet/dist/leaflet.css';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
-export default function MapView() {
+interface Props {
+  latitude: number;
+  longitude: number;
+}
+
+function LocationMarker({ latitude, longitude }: Props) {
+  const map = useMap();
+  map.flyTo([latitude, longitude], 15);
+
+  return (
+    <Marker position={[latitude, longitude]}>
+      <Popup>Found it!</Popup>
+    </Marker>
+  );
+}
+
+export default function MapView({ latitude, longitude }: Props) {
   return (
     <div className={styles.background}>
       <div className={styles.pattern} />
       <MapContainer
-        center={[0, 0]}
+        zoomControl={false}
+        center={[latitude, longitude]}
         zoom={13}
         scrollWheelZoom
-        style={{ height: '80vh' }}
+        style={{ height: '74.9vh' }}
       >
+        <ZoomControl position="bottomright" />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>You are on here.</Popup>
-        </Marker>
+        <LocationMarker latitude={latitude} longitude={longitude} />
       </MapContainer>
     </div>
   );
