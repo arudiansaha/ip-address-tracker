@@ -1,0 +1,66 @@
+:root {
+  --color-100: #fff;
+  --color-400: #969696;
+  --color-800: #2b2b2b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--color-100);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root {
+  isolation: isolate;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body,
+  #root {
+    background-color: var(--color-800);
+  }
+}

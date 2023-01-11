@@ -1,0 +1,11 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding-block: clamp(1.25rem, 2vw, 2rem);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.25rem, 2vw, 3rem);
+  color: var(--color-100);
+}
