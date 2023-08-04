@@ -13,6 +13,8 @@ export default function IpTrackerSearch({ value, onChange, onClick }: Props) {
       <input
         type="text"
         className={styles.input}
+        id="searchInput"
+        name="searchInput"
         placeholder="Search for any IP address or domain"
         value={value}
         onChange={onChange}
